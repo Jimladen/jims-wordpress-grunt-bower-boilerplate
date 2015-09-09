@@ -1,0 +1,15 @@
+/* Custom SASS */
+
+
+/* 
+    Import includes
+*/
+
+@import "includes/mixins.scss";
+@import "includes/type.scss";
+@import "includes/default.scss";
+
+
+h1 {
+	color:blue;
+}
