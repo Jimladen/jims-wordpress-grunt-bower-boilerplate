@@ -37,3 +37,15 @@ fs.outputFile('js/global.js', '/* Custom JS */', function(err) {
 
 })
 
+fs.ensureDir('templates/', function(err) {
+    if (err) {
+        return console.log(err);
+    }
+})
+
+
+fs.ensureDir('css/', function(err) {
+    if (err) {
+        return console.log(err);
+    }
+})
