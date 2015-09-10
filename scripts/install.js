@@ -2,7 +2,7 @@ var fs = require('fs-extra')
 
 bowercc_config = JSON.stringify({
     "scripts": {
-        "postinstall": "wiredep -s header.php"
+        "postinstall": "grunt wiredep"
     }
 });
 
@@ -24,6 +24,13 @@ bower_config = JSON.stringify({
 
 
 fs.outputFile("bower.json", bower_config, function(err) {
+    if (err) {
+        return console.log(err);
+    }
+})
+
+
+fs.outputFile(".bowerrc", bower_config, function(err) {
     if (err) {
         return console.log(err);
     }
